@@ -23,7 +23,7 @@ namespace GetAllCombinations
                 Convert.ToInt32(textBox4.Text)
             };
 
-            var result = GetPermutations(numbers, 4);
+            var result = GetPermutations(numbers, numbers.Count);
             var combinations = result as IList<IEnumerable<int>> ?? result.ToList();
             listBox1.Items.Add("Total items " + combinations.Count().ToString(CultureInfo.InvariantCulture) + Environment.NewLine);
             foreach (var combination in combinations)
